@@ -1,2 +1,2 @@
 # r-programming
-A repo to store data analysis exercises completed using R
+A repository to store data analysis exercises completed using R
