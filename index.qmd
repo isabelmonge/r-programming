@@ -1,0 +1,41 @@
+---
+title: "My first slides"
+subtitle: "Dataviz of Gapminder"
+author: "Isabel Monge"
+format: revealjs
+editor: visual
+---
+
+## Loading data
+
+We will load the dataset in 'gapminder'
+```{r}
+library(gapminder)
+gapminder
+```
+
+---
+
+## Preprocess the data
+
+We will extract the data from 2007
+```{r}
+#| echo: TRUE
+library(dplyr)
+gapminder_2007 <- gapminder |> 
+  filter(year == 2007)
+```
+
+---
+
+## Plot the data
+
+```{r}
+#| echo: TRUE
+#| code-fold: TRUE
+library(ggplot2)
+ggplot(gapminder_2007) +
+  geom_point(aes(x = lifeExp, y = gdpPercap, color = continent)) +
+  theme_minimal()
+```
+
